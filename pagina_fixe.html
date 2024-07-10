@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de internet fixe do Diogo</title>
+    <title>Página de Internet Fixe do Diogo</title>
     <style>
         body, html {
             margin: 0;
@@ -212,6 +212,56 @@
         .cloud2 { background: #87CEEB; width: 80px; height: 50px; right: 15%; top: 35%; animation-delay: 2s; }
         .cloud3 { background: #98FB98; width: 120px; height: 70px; left: 25%; top: 55%; animation-delay: 4s; }
         .cloud4 { background: #DDA0DD; width: 90px; height: 55px; right: 30%; top: 15%; animation-delay: 6s; }
+        .penguin {
+            position: absolute;
+            bottom: -1%;
+            right: 18%;
+            width: 40px;
+            height: 60px;
+            background: #000;
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            z-index: 3;
+        }
+        .penguin::before {
+            content: '';
+            position: absolute;
+            top: 10%;
+            left: 25%;
+            width: 50%;
+            height: 40%;
+            background: white;
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+        }
+        .penguin::after {
+            content: '';
+            position: absolute;
+            top: 15%;
+            left: 35%;
+            width: 30%;
+            height: 10%;
+            background: orange;
+            border-radius: 50%;
+        }
+        .igloo {
+            position: absolute;
+            bottom: -1%;
+            right: 10%;
+            width: 100px;
+            height: 60px;
+            background: #f0f0f0;
+            border-radius: 100% 100% 0 0;
+            z-index: 2;
+        }
+        .igloo::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 20%;
+            width: 60%;
+            height: 50%;
+            background: #d0d0d0;
+            border-radius: 100% 100% 0 0;
+        }
         @keyframes float {
             0% { transform: translateY(0px); }
             50% { transform: translateY(-3px); }
@@ -261,6 +311,8 @@
         <div class="cloud cloud2"></div>
         <div class="cloud cloud3"></div>
         <div class="cloud cloud4"></div>
+        <div class="igloo"></div>
+        <div class="penguin"></div>
     </div>
     <script>
         function createStar() {
